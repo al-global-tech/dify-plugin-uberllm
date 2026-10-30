@@ -1,0 +1,6 @@
+# Built packages: attach to a GitHub release / the dify-plugins PR, never commit
+dist/
+*.difypkg
+__pycache__/
+*.py[cod]
+.venv/

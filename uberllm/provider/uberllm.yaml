@@ -1,0 +1,94 @@
+provider: uberllm
+label:
+  en_US: UberLLM
+description:
+  en_US: Hundreds of chat models from OpenAI, Anthropic, Google, DeepSeek, Qwen and more with one UberLLM key, at list price or less.
+icon_small:
+  en_US: icon.svg
+icon_large:
+  en_US: icon.svg
+background: "#EEECFD"
+help:
+  title:
+    en_US: Get your UberLLM API key
+  url:
+    en_US: https://uberllm.dev/dashboard/keys
+supported_model_types:
+  - llm
+configurate_methods:
+  - predefined-model
+  - customizable-model
+provider_credential_schema:
+  credential_form_schemas:
+    - variable: api_key
+      label:
+        en_US: API key
+      type: secret-input
+      required: true
+      placeholder:
+        en_US: Paste your UberLLM key (starts with ull_)
+model_credential_schema:
+  model:
+    label:
+      en_US: Model name
+    placeholder:
+      en_US: Exact name from uberllm.dev/models, like deepseek/deepseek-v4.1-flash
+  credential_form_schemas:
+    - variable: api_key
+      label:
+        en_US: API key
+      type: secret-input
+      required: true
+      placeholder:
+        en_US: Paste your UberLLM key (starts with ull_)
+    - variable: context_size
+      label:
+        en_US: Context size (tokens)
+      type: text-input
+      required: true
+      placeholder:
+        en_US: How much text the model reads at once, shown on its page at uberllm.dev/models
+    - variable: max_tokens_to_sample
+      label:
+        en_US: Longest reply (tokens)
+      type: text-input
+      required: true
+      default: "4096"
+      placeholder:
+        en_US: The most the model may write in one reply
+    - variable: vision_support
+      label:
+        en_US: Can it read pictures?
+      type: radio
+      required: false
+      default: no_support
+      options:
+        - value: support
+          label:
+            en_US: "Yes"
+        - value: no_support
+          label:
+            en_US: "No"
+    - variable: function_calling_type
+      label:
+        en_US: Can it use tools?
+      type: radio
+      required: false
+      default: no_call
+      options:
+        - value: tool_call
+          label:
+            en_US: "Yes"
+        - value: no_call
+          label:
+            en_US: "No"
+models:
+  llm:
+    position: models/llm/_position.yaml
+    predefined:
+      - models/llm/*.yaml
+extra:
+  python:
+    provider_source: provider/uberllm.py
+    model_sources:
+      - models/llm/llm.py
