@@ -1,11 +1,11 @@
-version: 0.0.1
+version: 0.0.2
 type: plugin
 author: uberllm
 name: uberllm
 label:
-  en_US: UberLLM
+  en_US: MartLLM
 description:
-  en_US: Use hundreds of chat models from OpenAI, Anthropic, Google, DeepSeek, Qwen and more in Dify with one UberLLM key, at list price or less.
+  en_US: Use hundreds of chat models from OpenAI, Anthropic, Google, DeepSeek, Qwen and more in Dify with one MartLLM key, at list price or less.
 icon: icon.svg
 resource:
   memory: 268435456
@@ -27,8 +27,9 @@ meta:
   minimum_dify_version: 1.0.0
 created_at: 2026-10-30T03:26:27Z
 privacy: PRIVACY.md
-repo: https://github.com/PSA-Team-source/dify-plugin-uberllm
-contact: support@uberllm.dev
+repo: https://github.com/al-global-tech/dify-plugin-uberllm
+contact: founder@uberllm.dev
 network:
   domains:
+    - api.martllm.com
     - api.uberllm.dev

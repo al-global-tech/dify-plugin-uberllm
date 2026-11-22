@@ -1,14 +1,14 @@
-"""Check the UberLLM Dify plugin. Not shipped in the .difypkg.
+"""Check the MartLLM Dify plugin. Not shipped in the .difypkg.
 
 Loads the plugin the way the Dify runtime does (manifest, provider and model
-YAML, Python classes), then runs offline checks. With UBERLLM_KEY_FILE set to a
+YAML, Python classes), then runs offline checks. With MARTLLM_KEY_FILE set to a
 file holding an ull_ key, it also runs live checks: key validation (free),
 custom-model validation (free) and one streamed + one non-streamed chat with
 google/gemini-2.5-flash (a few tokens, well under $0.001).
 
     pip install "dify_plugin==0.10.2"
     python check_plugin.py                       # offline
-    UBERLLM_KEY_FILE=~/ull_key python check_plugin.py   # offline + live
+    MARTLLM_KEY_FILE=~/ull_key python check_plugin.py   # offline + live
 """
 
 import os
@@ -58,9 +58,9 @@ assert isinstance(plain_error(400, "not json"), InvokeBadRequestError)
 print("offline: OK (plugin loads, 20 models, error messages)")
 
 # --- live --------------------------------------------------------------------
-key_file = os.environ.get("UBERLLM_KEY_FILE")
+key_file = os.environ.get("MARTLLM_KEY_FILE")
 if not key_file:
-    print("live: skipped (set UBERLLM_KEY_FILE)")
+    print("live: skipped (set MARTLLM_KEY_FILE)")
     sys.exit(0)
 key = Path(key_file).expanduser().read_text().strip()
 

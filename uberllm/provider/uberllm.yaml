@@ -1,8 +1,8 @@
 provider: uberllm
 label:
-  en_US: UberLLM
+  en_US: MartLLM
 description:
-  en_US: Hundreds of chat models from OpenAI, Anthropic, Google, DeepSeek, Qwen and more with one UberLLM key, at list price or less.
+  en_US: Hundreds of chat models from OpenAI, Anthropic, Google, DeepSeek, Qwen and more with one MartLLM key, at list price or less.
 icon_small:
   en_US: icon.svg
 icon_large:
@@ -10,9 +10,9 @@ icon_large:
 background: "#EEECFD"
 help:
   title:
-    en_US: Get your UberLLM API key
+    en_US: Get your MartLLM API key
   url:
-    en_US: https://uberllm.dev/dashboard/keys
+    en_US: https://martllm.com/dashboard/keys
 supported_model_types:
   - llm
 configurate_methods:
@@ -26,13 +26,13 @@ provider_credential_schema:
       type: secret-input
       required: true
       placeholder:
-        en_US: Paste your UberLLM key (starts with ull_)
+        en_US: Paste your MartLLM key (starts with ull_)
 model_credential_schema:
   model:
     label:
       en_US: Model name
     placeholder:
-      en_US: Exact name from uberllm.dev/models, like deepseek/deepseek-v4.1-flash
+      en_US: Exact name from martllm.com/models, like deepseek/deepseek-v4.1-flash
   credential_form_schemas:
     - variable: api_key
       label:
@@ -40,14 +40,14 @@ model_credential_schema:
       type: secret-input
       required: true
       placeholder:
-        en_US: Paste your UberLLM key (starts with ull_)
+        en_US: Paste your MartLLM key (starts with ull_)
     - variable: context_size
       label:
         en_US: Context size (tokens)
       type: text-input
       required: true
       placeholder:
-        en_US: How much text the model reads at once, shown on its page at uberllm.dev/models
+        en_US: How much text the model reads at once, shown on its page at martllm.com/models
     - variable: max_tokens_to_sample
       label:
         en_US: Longest reply (tokens)
