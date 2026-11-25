@@ -28,8 +28,8 @@ Per the [MartLLM Privacy Policy](https://martllm.com/privacy):
 
 - Remove the key from **Settings → Model Provider** in Dify, or uninstall the plugin, at any time.
 - Delete a key on [martllm.com/dashboard/keys](https://martllm.com/dashboard/keys) to stop it working at once.
-- To get a copy of your MartLLM data or delete your account, email founder@uberllm.dev from the address on your account.
+- To get a copy of your MartLLM data or delete your account, email contact@martllm.com from the address on your account.
 
 ## Contact
 
-Questions about this policy: founder@uberllm.dev
+Questions about this policy: contact@martllm.com

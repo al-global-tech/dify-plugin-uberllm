@@ -65,7 +65,7 @@ MartLLM does not store your prompts or the models' answers. See [PRIVACY.md](PRI
 
 ## Support
 
-- Email: founder@uberllm.dev
+- Email: contact@martllm.com
 - Issues and source: https://github.com/al-global-tech/dify-plugin-uberllm
 - Docs: [martllm.com/docs](https://martllm.com/docs)
 
